@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="mycard">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="myLeftCtn">
+          <form class="myForm text center" (ngSubmit)="postData()">
+            <!-- <form class="myForm text center" > -->
+            <header>Create New Product</header>
+            <div class="form-group">
+              <i class="fa-solid fa-file-signature fas"></i>
+              <input
+                type="text"
+                class="myInput"
+                placeholder="Product Name"
+                id="title"
+                name="productTitle"
+                 [(ngModel)]="productTitle"
+                required
+              /><!--  [(ngModel)]="productTitle"-->
+            </div>
+            <div class="form-group">
+              <i class="fa-solid fa-indian-rupee-sign fas"></i>
+              <input
+                type="number"
+                class="myInput"
+                placeholder="Price"
+                id="price"
+                name="productPrice"
+                [(ngModel)]="productPrice"
+                required
+              /><!--[(ngModel)]="productPrice"-->
+            </div>
+            <div class="form-group">
+              <i class="fa-solid fa-circle-info fas"></i>
+              <input
+                type="text"
+                class="myInput"
+                placeholder=" description"
+                id="price"
+                name="productDescription"
+                [(ngModel)]="productDescription"
+                required
+              />  <!--[(ngModel)]="productDescription"-->
+            </div>
+            <div class="form-group">
+              <i class="fa-solid fa-images fas"></i>
+              <input
+                type="file"
+                class="myInput"
+                placeholder="Image of Product"
+                id="image"  
+                (change)="onFileChange($event)"              
+                required
+              />   <!-- [(ngModel)]="productImage" -->
+            </div>
+            <br />
+            <button class="btn btn-primary butt">
+              <i class="fa-solid fa-toggle-off" routerLink="/products"></i>Add
+              Product
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

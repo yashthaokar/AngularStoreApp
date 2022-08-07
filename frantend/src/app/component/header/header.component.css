@@ -1,0 +1,11 @@
+#nav{
+    background-color: #8B5CF6;
+}
+ul{
+    float: right;
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+
+}

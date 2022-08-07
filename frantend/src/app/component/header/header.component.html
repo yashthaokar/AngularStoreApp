@@ -1,0 +1,16 @@
+<header>
+   <div class="navbar shadow-sm" id="nav">
+    <div class="navbar-brand align-item-center d-flex">
+        <i style="font-size: 40px;" class="fa-solid fa-bag-shopping">
+        </i>
+        <strong style="font-size:25px;" routerLink="products">MyShopping.Com</strong>
+    </div>
+<h5 routerLink="create">Create</h5>
+<h5 routerLink="login">Login</h5>
+        
+    <button routerLink="cart" class="btn btn-primary">
+        <i  class="fa-solid fa-cart-shopping"></i>
+        <div class="badge bg-warning">{{totalItem}}</div>
+    </button>
+   </div>
+</header>

@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="mycard">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="myLeftCtn">
+          <form class="myForm text center">
+            <header>Create new Account</header>
+            <div class="form-group">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                class="myInput"
+                placeholder="Username"
+                id="username"
+                required
+              />
+             
+            </div>
+            <div class="form-group">
+              <i class="fa-solid fa-envelope fas"></i>
+              <input
+                type="email"
+                class="myInput"
+                placeholder="Email Id"
+                id="email"
+                required
+              />
+             
+            </div>
+            <div class="form-group">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  class="myInput"
+                  placeholder="password"
+                  id="password"
+                  required
+                />
+               
+              </div>
+              <div class="form-group check">
+               
+                <input type="checkbox" id="user" name="user" value="user">
+<label >User</label>
+
+<input type="checkbox" id="admin" name="admin" value="admin">
+<label >Admin</label>
+              
+              </div>
+    
+              <button class="btn btn-primary butt"><i class="fa-solid fa-toggle-off" routerLink="products"></i>Login</button>
+
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="myRightCtn">
+            <div class="box">
+                <header>Hello World!</header>
+                <p>You just have to  login </p>
+                <p>Just Enter your Name and Password you want</p>
+                <p>Please select the Role </p>
+                <button class="butt_out"><i class="fa-solid fa-arrow-left" style="color:yellow ;" ></i> Login </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<ng-container *ngIf="products.length != 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>Sr.No</th>
+              <th>Product Image</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>
+                <img style="width: 120px" src="{{ item.image }}" alt="" />
+              </td>
+              <td>{{ item.title }}</td>
+              <!-- //<td style="width:25% ;">{{item.description}}</td> -->
+              <td>
+                <i class="fa-solid fa-indian-rupee-sign"></i>{{ item.price }}
+              </td>
+              <td>{{ item.quantity }}</td>
+              <td>
+                <i class="fa-solid fa-indian-rupee-sign"></i>{{ item.total }}
+              </td>
+              <td>
+                <button (click)="removeItem(item)" class="btn btn-danger">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td><button (click)="emptycart()" class="btn btn-warning">Empty Cart</button></td>
+              <td><button class="btn btn-success" routerLink="/products">Shop More</button></td>
+              <td><button class="btn btn-info">Check Out</button></td>
+              <td><strong>Grand Total: ${{grandTotal}}</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="products.length == 0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+      <img
+        src="https://static.vecteezy.com/system/resources/thumbnails/007/967/869/small_2x/fashion-shopping-cart-special-festival-merchandise-discount-offer-idea-vector.jpg"
+        alt=""
+      />
+      <h4>Your cart has no of Items</h4>
+      <h6>add Item to it now</h6>
+      <button routerLink="/products" class="btn btn-success">shop now</button>
+    </div>
+  </div></ng-container
+>
